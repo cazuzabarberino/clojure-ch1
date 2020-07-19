@@ -75,9 +75,7 @@
 
 (defn mapset
   [f vector]
-  (let
-   [newSet (set vector)]
-    (set (map f newSet))))
+  (set (map f (set vector))))
 
 (mapset inc [1 1 2 2])
 
